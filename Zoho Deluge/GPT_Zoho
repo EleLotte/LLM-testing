@@ -12,7 +12,7 @@ else
 	previousResponse = "NA";
 }
 info session;
-token = "Bearer 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";
+token = "Bearer #HuggingFaceAPI#";
 header = Map();
 header.put("Authorization",token);
 header.put("Content-Type","application/json");
