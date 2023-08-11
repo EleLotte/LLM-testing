@@ -1,0 +1,142 @@
+[
+  {
+    "Colchon": "Colchón Altitud",
+    "Comodidad": "Firme",
+    "Posicion": ["Boca abajo", "De lado", "Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": "Intermedia"
+  },
+  {
+    "Colchon": "Colchón Brabus",
+    "Comodidad": "Firme",
+    "Posicion": ["Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": "Delgada"
+  },
+  {
+    "Colchon": "Colchón Burgos",
+    "Comodidad": "Suave",
+    "Posicion": ["Boca arriba", "De lado"],
+    "Compania": ["Solo"],
+    "Complexion": "Intermedia"
+  },
+  {
+    "Colchon": "Colchón Fortune",
+    "Comodidad": "Suave",
+    "Posicion": ["Boca arriba", "De lado"],
+    "Compania": ["Solo"],
+    "Complexion": "Delgada"
+  },
+  {
+    "Colchon": "Colchón Spirit",
+    "Comodidad": "Suave",
+    "Posicion": ["Boca arriba", "De lado"],
+    "Compania": ["Solo"],
+    "Complexion": "Delgada"
+  },
+  {
+    "Colchon": "Colchón Viena",
+    "Comodidad": "Equilibrado",
+    "Posicion": ["Boca abajo", "De lado", "Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": "Intermedia"
+  },
+  {
+    "Colchon": "Colchón Cannon",
+    "Comodidad": "Firme",
+    "Posicion": ["Boca arriba"],
+    "Compania": ["Solo"],
+    "Complexion": "Delgada"
+  },
+  {
+    "Colchon": "Colchón Xpand ESP TR",
+    "Comodidad": "Suave",
+    "Posicion": ["Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": ["Delgada", "Intermedia"]
+  },
+  {
+    "Colchon": "Colchón Xpand Clásico",
+    "Comodidad": "Suave",
+    "Posicion": ["Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": ["Delgada", "Intermedia"]
+  },
+  {
+    "Colchon": "Colchón Xpand Monarch",
+    "Comodidad": "Suave",
+    "Posicion": ["Con movimiento"],
+    "Compania": ["Solo"],
+    "Complexion": "Robusta"
+  },
+  {
+    "Colchon": "Colchón Hotelero",
+    "Comodidad": "Suave",
+    "Posicion": ["Boca arriba"],
+    "Compania": ["Solo"],
+    "Complexion": "Robusta"
+  },
+  {
+    "Colchon": "Colchón Xpand Core",
+    "Comodidad": "Equilibrado",
+    "Posicion": ["De lado"],
+    "Compania": ["Solo"],
+    "Complexion": ["Delgada", "Intermedia"]
+  },
+  {
+    "Colchon": "Colchón Gran Turismo",
+    "Comodidad": "Equilibrado",
+    "Posicion": ["Boca arriba"],
+    "Compania": ["Solo"],
+    "Complexion": "Robusta"
+  },
+  {
+    "Colchon": "Colchón Cannon",
+    "Comodidad": "Firme",
+    "Posicion": ["Boca abajo"],
+    "Compania": ["Solo"],
+    "Complexion": "Robusta"
+  },
+  {
+    "Colchon": "Colchón Gales",
+    "Comodidad": "Firme",
+    "Posicion": ["Boca arriba"],
+    "Compania": ["Solo"],
+    "Complexion": "Robusta"
+  },
+  {
+    "Colchon": "Aloe Vera",
+    "Comodidad": "Suave",
+    "Posicion": ["Boca abajo", "De lado", "Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": ["Delgada", "Intermedia"]
+  },
+  {
+    "Colchon": "Bamboo Aloe",
+    "Comodidad": "Suave",
+    "Posicion": ["Boca abajo", "De lado"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": ["Delgada", "Intermedia"]
+  },
+  {
+    "Colchon": "Armor",
+    "Comodidad": "Firme",
+    "Posicion": ["Boca arriba", "Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": ["Intermedia", "Robusta"]
+  },
+  {
+    "Colchon": "Brabus",
+    "Comodidad": "Equilibrado",
+    "Posicion": ["Boca arriba"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": "Robusta"
+  },
+  {
+    "Colchon": "Viroclean",
+    "Comodidad": "Equilibrado",
+    "Posicion": ["Boca arriba", "De lado", "Con movimiento"],
+    "Compania": ["Solo", "pareja"],
+    "Complexion": ["Intermedia", "Robusta"]
+  }
+]
