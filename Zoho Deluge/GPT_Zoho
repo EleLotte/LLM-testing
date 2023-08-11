@@ -1,0 +1,35 @@
+ 
+if(session.containsKey("question"))
+{
+	question = session.get("question").get("value");
+}
+if(session.containsKey("previousResponse"))
+{
+	previousResponse = session.get("previousResponse").get("value");
+}
+else
+{
+	previousResponse = "NA";
+}
+info session;
+token = "Bearer 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";
+header = Map();
+header.put("Authorization",token);
+header.put("Content-Type","application/json");
+chatgpt = Collection();
+chatgpt = {"model":"gpt-3.5-turbo","messages":{{"role":"assistant","content":previousResponse},{"role":"user","content":question}},"temperature":0.9,"max_tokens":200,"top_p":1,"frequency_penalty":0.0,"presence_penalty":0.6,"stop":{" Human:"," AI:"}};
+params = Map();
+params.put(chatgpt);
+response = invokeurl
+[
+	url :"https://api.openai.com/v1/chat/completions"
+	type :POST
+	parameters:params.toString()
+	headers:header
+];
+info response;
+answer = response.get("choices").getJSON("message").get("content");
+info answer;
+response = Map();
+response.put("answer",answer);
+return response;

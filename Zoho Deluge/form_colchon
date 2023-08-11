@@ -1,0 +1,65 @@
+query = "Error";
+if(session.containsKey("salud"))
+{
+	comodidad = session.get("comodidad").get("value");
+	compania = session.get("compania").get("value");
+	if(compania != "solo")
+	{
+		compania = "pareja";
+	}
+	posicion = session.get("posicion").get("value");
+	edad = session.get("edad").get("value");
+	complexion = session.get("complexion").get("value");
+	query = "[Buscaba un colchon que sea " + comodidad + ", suelo dormir " + compania + " y " + posicion + ", tengo " + edad + " años y soy de complexion " + complexion + ".] ";
+	arreglo = Collection();
+	arreglo = {{"Colchon":"Colchón Altitud","Comodidad":"firme","Posicion":{"boca abajo","de lado","me muevo"},"Compania":{"solo","pareja"},"Complexion":"intermedia"},{"Colchon":"Colchón Brabus","Comodidad":"firme","Posicion":{"me muevo"},"Compania":{"solo","pareja"},"Complexion":"delgada"},{"Colchon":"Colchón Burgos","Comodidad":"suave","Posicion":{"boca arriba","de lado"},"Compania":{"solo"},"Complexion":"intermedia"},{"Colchon":"Colchón Fortune","Comodidad":"suave","Posicion":{"boca arriba","de lado"},"Compania":{"solo"},"Complexion":"delgada"},{"Colchon":"Colchón Spirit","Comodidad":"suave","Posicion":{"boca arriba","de lado"},"Compania":{"solo"},"Complexion":"delgada"},{"Colchon":"Colchón Viena","Comodidad":"equilibrado","Posicion":{"boca abajo","de lado","me muevo"},"Compania":{"solo","pareja"},"Complexion":"intermedia"},{"Colchon":"Colchón Cannon","Comodidad":"firme","Posicion":{"boca arriba"},"Compania":{"solo"},"Complexion":"delgada"},{"Colchon":"Colchón Xpand ESP TR","Comodidad":"suave","Posicion":{"me muevo"},"Compania":{"solo","pareja"},"Complexion":{"delgada","intermedia"}},{"Colchon":"Colchón Xpand Clásico","Comodidad":"suave","Posicion":{"me muevo"},"Compania":{"solo","pareja"},"Complexion":{"delgada","intermedia"}},{"Colchon":"Colchón Xpand Monarch","Comodidad":"suave","Posicion":{"me muevo"},"Compania":{"solo","pareja"},"Complexion":"robusta"},{"Colchon":"Colchón Hotelero","Comodidad":"suave","Posicion":{"boca arriba"},"Compania":{"solo"},"Complexion":"robusta"},{"Colchon":"Colchón Xpand Core","Comodidad":"equilibrado","Posicion":{"de lado"},"Compania":{"solo"},"Complexion":{"delgada","intermedia"}},{"Colchon":"Colchón Gran Turismo","Comodidad":"equilibrado","Posicion":{"boca arriba"},"Compania":{"solo","pareja"},"Complexion":"robusta"},{"Colchon":"Colchón Cannon","Comodidad":"firme","Posicion":{"boca abajo"},"Compania":{"solo"},"Complexion":"robusta"},{"Colchon":"Colchón Gales","Comodidad":"firme","Posicion":{"boca arriba"},"Compania":{"solo"},"Complexion":"robusta"},{"Colchon":"Aloe Vera","Comodidad":"suave","Posicion":{"boca abajo","de lado","me muevo"},"Compania":{"solo","pareja"},"Complexion":{"delgada","intermedia"}},{"Colchon":"Bamboo Aloe","Comodidad":"suave","Posicion":{"boca abajo","de lado"},"Compania":{"solo","pareja"},"Complexion":{"delgada","intermedia"}},{"Colchon":"Armor","Comodidad":"firme","Posicion":{"boca arriba","me muevo"},"Compania":{"solo","pareja"},"Complexion":{"intermedia","robusta"}},{"Colchon":"Brabus","Comodidad":"equilibrado","Posicion":{"boca arriba"},"Compania":{"solo","pareja"},"Complexion":"robusta"},{"Colchon":"Viroclean","Comodidad":"equilibrado","Posicion":{"boca arriba","de lado","me muevo"},"Compania":{"solo","pareja"},"Complexion":{"intermedia","robusta"}}};
+	descartes = Collection();
+	for each  colchon in arreglo
+	{
+		temperatura = 0;
+		if(colchon.get("Comodidad") == comodidad)
+		{
+			temperatura = temperatura + 1;
+			for each  pos in colchon.get("Posicion")
+			{
+				if(pos.contains(posicion))
+				{
+					temperatura = temperatura + 1;
+					for each  com in colchon.get("Compania")
+					{
+						if(com.contains(compania))
+						{
+							temperatura = temperatura + 1;
+						}
+					}
+					for each  con in colchon.get("Complexion")
+					{
+						if(con.contains(complexion))
+						{
+							temperatura = temperatura + 1;
+						}
+					}
+					if(temperatura >= 3)
+					{
+						descartes.insert({"colchon":colchon.get("Colchon"),"temperatura":temperatura});
+					}
+				}
+			}
+		}
+	}
+	info descartes;
+	salud = session.get("salud").get("value");
+	if(salud != "no")
+	{
+		salud = "También menciona los siguientes problemas de salud para tenerlos en consideración: [" + salud + "]";
+	}
+	else
+	{
+		salud = "";
+	}
+	query = query + salud;
+}
+response = Map();
+info query;
+response.put("query",query);
+return response; 

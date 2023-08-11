@@ -1,0 +1,35 @@
+if(session.containsKey("question"))
+{
+	question = session.get("question").get("value");
+}
+if(session.containsKey("previousResponse"))
+{
+	previousResponse = session.get("previousResponse").get("value");
+}
+else
+{
+	previousResponse = "NA";
+}
+info session;
+info "running";
+token = "Bearer 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";
+header = Map();
+header.put("Authorization",token);
+chatgpt = Collection();
+chatgpt = {"inputs":question,"options":{"wait_for_model":true}};
+params = Map();
+params.put(chatgpt);
+info params.toString();
+response = invokeurl
+[
+	url :"https://api-inference.huggingface.co/models/DeepESP/gpt2-spanish"
+	type :POST
+	parameters:params.toString()
+	headers:header
+];
+info response;
+answer = response.getJSON("sequence");
+info answer;
+response = Map();
+response.put("answer",answer);
+return response; 
